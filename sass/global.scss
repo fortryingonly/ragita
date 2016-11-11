@@ -1,0 +1,445 @@
+
+
+@import "libs/normalize";
+
+// vars
+
+$lightblue: #6aafe6;
+$lightblack: #4f4e54;
+$gray: #6c6c6f;
+$green: #5cab7c;
+
+$transit: .4s ease;
+
+// ========================
+
+// base-styles
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	letter-spacing: 0.07rem;
+}
+
+html{
+	font-size: 10px;
+	height: 100%;
+}
+
+body{
+	font-size: 1.4rem; // i.e. 14px
+	font-family: 'Source sans pro', 'open sans', sans-serif;
+	transition: all $transit;
+	opacity: 0;
+	height: 100%;
+}
+
+ul{list-style: none;}
+
+button{
+	border: 0;
+	border-radius: 8px;
+}
+
+input, textarea, button{
+	outline: 0;
+}
+
+a{text-decoration: none;}
+
+p{
+	font-size: 1.4rem;
+	line-height: 28px;
+}
+
+section{
+	margin-top: 90px;
+	text-align: center;
+}
+
+ // end base-styles
+
+// ====================
+
+// layout styles
+
+.container{
+	width: 1070px;
+	margin: 0 auto;
+	max-width:100%;
+	padding: 0 15px;
+}
+
+.pull-left{float: left;}
+
+.pull-right{float: right;}
+
+.clear-left{clear: left}
+
+.clear-right{clear: right;}
+
+
+.clearfix{clear: both;}
+
+// modules styles
+
+.custom-title{
+	font-size: 2.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.button{
+	padding: 15px 70px;
+	font-size: 1.6rem;
+	font-weight: 600;
+	display: inline-block;
+	text-transform: uppercase;
+	border-radius: 10px;
+	transition: all $transit;
+	&.btn-primary{
+		color: white;
+		background: $lightblue;
+		&:hover{background: darken($lightblue, 10%)}
+	}
+	&.btn-stroke{
+		border: 2px solid $lightblue;;
+		color: $lightblue;
+		background: transparent;
+		&:hover{
+			color: darken($lightblue, 10%);
+			border-color: darken($lightblue, 10%);
+
+		}
+	}
+}
+
+//=======================
+
+
+
+nav{
+	background: rgba(32, 33, 37, .9);
+	padding: 35px 0;
+	width: 100%;
+	max-height: 100px;
+	position: fixed;
+	top: 0;
+	transition: all $transit;
+	z-index: 10;
+}
+
+.nav-elements{
+	li{
+		display: inline-block;
+		.nav-item{
+			font-size: 1.6rem;
+			font-weight: 600;
+			color: white;
+			text-transform: capitalize;
+			transition: all $transit;
+			padding: 8px 16px;
+			color: white;
+			&:not(.special):hover{
+				color: $lightblue;
+			}
+
+			&.special{
+				border: 1px solid white;
+				border-radius: 20px;
+				padding:6px 20px;	
+				&:hover{
+					background: $lightblue;
+					border-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+
+.mobile-menu{
+	#menu-trigger{
+		color: white;
+		font-size: 1.8rem;
+		padding: 0 20px;
+	}
+}
+
+.menu-modal{
+	position: fixed;
+	width:100%;
+	height:100%;
+	background: rgb(32, 33, 37);
+	left:0;
+	top:0;
+	text-align: center;
+	transition: all $transit;
+	z-index: 1;
+	li a{
+		display: inline-block;
+		font-size: 3rem;
+		font-weight: 600;
+		color: white;
+		padding: 10px;
+		text-transform: capitalize;
+
+		&:hover, &:focus{
+			color: $lightblue;
+		}
+	}
+
+	#menu-close{
+		background: white;
+		margin:50px 0 20px 0;
+		padding:10px 12px;
+		border-radius: 40px;
+		font-size:2rem;
+		color: #343434;
+	}
+}
+
+.is-hidden{
+	opacity: 0;
+	top: -102%;
+	display: none;
+}
+
+.slides-wrapper{
+	background: url('../images/slide.jpg') no-repeat;
+	background-size: cover;
+	height: 700px;
+}
+
+.slide{
+	padding: 188px 0;
+	color: white;
+	font-size:10px;
+	.heading-title{
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 3.1em;
+	}
+
+	p,h1{
+		width: 80%;
+		margin: 3rem 0;
+	}
+	p{font-size:1.6rem;}
+
+	.button{
+		margin-top:3rem;
+	}
+}
+
+// end header
+
+.about{
+	.custom-title{color: $lightblack;}
+	p{color: $gray;margin-top:3rem}
+}
+
+// end about
+
+.services{
+	// chng to another clr 
+	.custom-title{color: $green;}
+}
+
+.services-box{
+	margin-top:50px;
+}
+
+.single-service{
+	border: 3px solid #d8d8d8;
+	border-radius: 6px;
+	width: calc(33.3333% - 20px);
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 30px 20px;
+	&:not(:first-of-type){margin-left:20px;}
+	
+	.service-icon{
+		font-size: 3.2rem;
+
+		&.icon-lightblue{color: $lightblue;}
+
+		&.icon-green{color: $green;}
+
+		&.icon-red{color: #e23f44;}
+
+		&.icon-pink{color: #de678f;}
+
+		&.icon-darkblue{color: #2c3f50;}
+
+	}
+
+	h2{
+		font-size: 2.2rem;
+		font-weight: 600;
+		margin: 20px 0;
+		text-transform: uppercase;
+	}
+	p{
+		color: $gray;
+		padding-bottom: 20px;
+	}
+
+}
+
+#show-more{
+	width: 96%;
+	margin:  auto;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	display: none;
+}
+
+// end services
+
+// ===================
+
+.work-process{
+	.custom-title{color: $lightblue}
+	height: 360px;
+}
+
+// end work process
+
+// ===================
+
+.portfolio{
+	.custom-title{color: $lightblack;}
+
+	// for detecting design issues
+	// *{border: 1px solid red}
+}
+
+.shots-box{
+	display: flex;
+	margin-top: 80px;
+	margin-bottom: 20px;
+	min-height: 450px;
+}
+
+.shots-col-primary{
+	width:52%;
+	overflow: hidden;
+	margin:0 30px;
+	.img-wrapper{
+		height: 261px;
+	}
+}
+
+.shots-col-secondary{
+	width:25%;
+	.sm-img{
+		height: 195px;
+	}
+	.tall-img{
+		height: 328px;
+	}
+}
+
+
+.img-wrapper{
+	overflow: hidden;
+	margin-bottom: 30px;
+	border-radius: 6px;
+	position: relative;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+
+	.overlay{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: linear-gradient(to top, rgba(9,9,9, .8),60%, rgba(9,9,9, 0));
+		opacity: 0;
+		transition: opacity $transit;
+		span{
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+			font-size: 1.6rem;
+			font-weight: 600;
+			color: white;
+			text-transform: capitalize;
+		}
+	}
+	&:hover .overlay{opacity: 1;}
+}
+
+// end portfolio
+
+// =======================
+
+.why-us{
+	.custom-title{
+		color: white;
+	}
+	background: url('../images/slide.jpg') no-repeat;
+	background-size: cover;
+	padding: 50px 0;
+	.container{
+		display: flex;
+		margin-top: 50px;
+
+	}
+}
+
+.c-box{
+	margin: 0 auto;
+	h3{
+		font-size: 1.9rem;
+		font-weight: 600;
+		color: white;
+		text-transform: capitalize;
+		margin: 25px 0;
+
+	}
+}
+.icon-wrapper{
+	position: relative;
+	height: 110px;
+	width: 110px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255, .2);
+	margin: 0 auto;
+	i{
+		position: absolute;
+		font-size: 3.6rem;
+		color: white;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+.contact-cta{
+	background: #f1f1f1;
+	padding: 50px 0;
+	text-align: center;
+	.custom-title{
+		margin-top: 0;
+		color: $lightblack;
+	}
+	p{color: $lightblack;padding: 20px 0 45px 0;}
+}
+
+footer{
+	background: #212226;
+	padding: 20px 0;
+	color: white;
+}
+
+@import "contact-page";
+
+@import "media";
