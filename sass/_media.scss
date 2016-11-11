@@ -1,16 +1,23 @@
 
 @media screen and (min-width: 701px){
+
 	.mobile-menu{
 		display: none;
 	}
 }
 
-
-@media screen and (max-width: 700px){
-
+@media screen and (max-width: 838px){
 	.nav-elements{display: none;}
 
 	.mobile-menu{display: block;}
+
+}
+
+
+
+@media screen and (max-width: 700px){
+
+
 
 	.slides-wrapper{
 		height:650px;
@@ -30,10 +37,21 @@
 		&:nth-child(1){
 			margin-left: 20px;
 		}
-
-
-
 	}
+
+	.contact-wrapper{
+		h2{text-align: center}
+		form{
+			width: 90%;
+			float: none;
+			margin: 50px auto;
+		}
+
+		.right-side{
+			text-align: center;
+		}
+	}
+	
 
 
 }

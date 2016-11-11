@@ -1,5 +1,5 @@
 .contact-wrapper{
-	height: 100%;
+	min-height: 100%;
 	margin:0;
 	background:linear-gradient(to bottom, rgb(32, 33, 37), 50%, rgba(32, 33, 37, 0) ),
 	url('../images/slide.jpg');
@@ -53,7 +53,7 @@
 		}
 	}
 	.social-icons{
-		margin-top: 20px;
+		margin-top: 25px;
 		.social-ic{
 			display: inline-block;
 			padding: 10px;
