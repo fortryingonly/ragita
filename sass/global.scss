@@ -2,6 +2,7 @@
 
 @import "libs/normalize";
 
+
 // vars
 
 $lightblue: #6aafe6;
@@ -131,6 +132,10 @@ nav{
 	z-index: 10;
 }
 
+.nav-min-height{
+	max-height: 82px;
+}
+
 .nav-elements{
 	padding: 20px 0;
 	li{
@@ -209,7 +214,7 @@ nav{
 }
 
 .slides-wrapper{
-	background: url('../images/slide.jpg') no-repeat;
+	background: url('../images/slide.jpg') no-repeat fixed;
 	background-size: cover;
 	height: 700px;
 }
@@ -385,7 +390,7 @@ nav{
 	.custom-title{
 		color: white;
 	}
-	background: url('../images/slide.jpg') no-repeat;
+	background: url('../images/slide.jpg') no-repeat fixed;
 	background-size: cover;
 	padding: 50px 0;
 	.container{
@@ -440,6 +445,8 @@ footer{
 	padding: 20px 0;
 	color: white;
 }
+
+@import "page-404";
 
 @import "contact-page";
 

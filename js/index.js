@@ -16,8 +16,6 @@ for (i=0; i < navLinks.length; i++) {
 	}
 }
 
-
-
 menuTrigger.onclick = function(){
 	modalMenu.classList.remove('is-hidden');
 }
@@ -26,13 +24,14 @@ menuClose.onclick = function(){
 	modalMenu.classList.add('is-hidden');	
 }
 
-var nav = document.getElementById('nav');
+var nav = document.getElementById('nav'),
+		navLogo = nav.getElementsByTagName('img');
 
 window.onscroll = function(){
-	if(document.body.scrollTop > 160){
-		nav.style.transform = 'translateY(-100%)';
+	if(body.scrollTop > 100){
+		console.log('lol');
 	}
 	else{
-		nav.style.transform = 'translateY(0)';
+		nav.classList.remove('nav-min-height');
 	}
 }

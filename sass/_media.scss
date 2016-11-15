@@ -17,8 +17,6 @@
 
 @media screen and (max-width: 700px){
 
-
-
 	.slides-wrapper{
 		height:650px;
 	}
@@ -52,6 +50,10 @@
 		}
 	}
 	
+	.c-box{
+		&:nth-of-type(1),
+		&:nth-of-type(1){display: none}
+	}
 
 
 }
